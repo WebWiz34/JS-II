@@ -1,12 +1,9 @@
+var rectWidth = 350;
+var rectHeight = 300;
+var startingLine = 10;
 
+/* look in the function draw() for the updates */
 
-// screensize 938 x 755
-
-
-var borderBarx = 600;
-var borderBary = 800;
-var pageHeight = 1500;
-var pageWidth = 2500;
 
 var canvas = document.getElementById('creativeCoding');
 var ctx = canvas.getContext('2d');
@@ -33,27 +30,12 @@ function draw() {
    
     fix_dpi(); 
     var ctx = canvas.getContext('2d');
-    // Black
-    ctx.fillStyle = 'rgb(0, 0, 0)'; 
-    ctx.fillRect(borderBarx, 0, 60, pageHeight);
-    ctx.fillRect( 0 , borderBary, pageWidth, 50 );
-    ctx.fillRect(0, 300 , borderBary, 80); 
-    // Red
-    ctx.fillStyle = 'rgb(255, 0, 0)'; 
-    ctx.fillRect(borderBarx+60, 0, pageWidth - borderBarx, borderBary);
-    // Blue
-    ctx.fillStyle = 'rgb(0, 0, 255)'; 
-    ctx.fillRect( 0 ,  borderBary+50, borderBarx, borderBary + pageHeight );
-     // Black
-     ctx.fillStyle = 'rgb(0, 0, 0)'; 
-     ctx.fillRect(1800, borderBary, 60, borderBary + pageHeight );
-     // Black
-     ctx.fillStyle = 'rgb(0, 0, 0)'; 
-     ctx.fillRect(1800, borderBary + 300, pageWidth-borderBary, 60 );
-    // Yellow
-    // https://www.rapidtables.com/web/color/RGB_Color.html
-    ctx.fillStyle = 'rgb(255, 255, 0)'; 
-    ctx.fillRect( 1860 ,  borderBary + 360, borderBarx, borderBary + pageHeight );
+    ctx.fillStyle = 'rgb(255, 255, 0)';
 
-    }
-  }
+
+/* now we will pass the variable */
+
+    ctx.fillStyle = 'rgba(0, 0, 255, 0.5)';
+    ctx.fillRect(startingLine, 100, rectWidth, rectHeight);
+    ctx.fillRect(startingLine, 450, rectWidth, rectHeight);
+    ctx.fillRect(startingLine, 800, rectWidth, rectHeight);
