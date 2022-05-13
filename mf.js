@@ -1,20 +1,9 @@
 
 
-var rectWidth = 350;
-var rectHeight = 300;
-var startingLine = 100;
-
-/* playing with number is as easy as assigning a variable. */
-
-
-/* Then we will assign some math to the variables and use it in our program */
-
-var x = 50 + 50;
-var y = startingLine + 350;
-var z = 400 * 2;
-var finishLine = (rectHeight/ 2) + 1500; 
-
-
+var borderBarx = 600;
+var borderBary = 800;
+var pageHeight = 1500;
+var pageWidth = 2500;
 
 var canvas = document.getElementById('creativeCoding');
 var ctx = canvas.getContext('2d');
@@ -41,24 +30,31 @@ function draw() {
    
     fix_dpi(); 
     var ctx = canvas.getContext('2d');
-    ctx.fillStyle = 'rgb(0, 255, 0)'; 
-
-
-/* now we will pass the variable */
-
-   
-    ctx.fillRect(startingLine, x, rectWidth, rectHeight);
-    ctx.fillRect(startingLine, y, rectWidth, rectHeight);
-    ctx.fillRect(startingLine, z, rectWidth, rectHeight);
-    ctx.fillRect(finishLine, 0, 20, 1500);
-
+    // Black
+    ctx.fillStyle = 'rgb(0, 0, 0)'; 
+    ctx.fillRect(borderBarx, 0, 60, pageHeight);
+    ctx.fillRect( 0 , borderBary, pageWidth, 50 );
+    ctx.fillRect(0, 300 , borderBary, 80); 
+    // Red
+    ctx.fillStyle = 'rgb(255, 0, 0)'; 
+    ctx.fillRect(borderBarx+60, 0, pageWidth - borderBarx, borderBary);
+    // Blue
+    ctx.fillStyle = 'rgb(0, 0, 255)'; 
+    ctx.fillRect( 0 ,  borderBary+50, borderBarx, borderBary + pageHeight );
+     // Black
+     ctx.fillStyle = 'rgb(0, 0, 0)'; 
+     ctx.fillRect(1800, borderBary, 60, borderBary + pageHeight );
+     // Black
+     ctx.fillStyle = 'rgb(0, 0, 0)'; 
+     ctx.fillRect(1800, borderBary + 300, pageWidth-borderBary, 60 );
+    // Yellow
+    // https://www.rapidtables.com/web/color/RGB_Color.html
+    ctx.fillStyle = 'rgb(255, 255, 0)'; 
+    ctx.fillRect( 1860 ,  borderBary + 360, borderBarx, borderBary + pageHeight );
 
     }
   }
 
-/* go back to your variables and play around with the numbers
-   you will see how variables can help with speeding up iteration
-   and modification */
 
 
 
