@@ -2,7 +2,11 @@ var rectWidth = 350;
 var rectHeight = 300;
 var startingLine = 10;
 
-/* look in the function draw() for the updates */
+
+var x = 50 + 50;
+var y = startingLine + 350;
+var z = 400 * 2;
+var finishLine = (rectHeight/ 2) + 1500; 
 
 
 var canvas = document.getElementById('creativeCoding');
@@ -35,7 +39,8 @@ function draw() {
 
 /* now we will pass the variable */
 
-    ctx.fillStyle = 'rgba(0, 0, 255, 0.5)';
-    ctx.fillRect(startingLine, 100, rectWidth, rectHeight);
-    ctx.fillRect(startingLine, 450, rectWidth, rectHeight);
-    ctx.fillRect(startingLine, 800, rectWidth, rectHeight);
+
+    ctx.fillRect(startingLine, x, rectWidth, rectHeight);
+    ctx.fillRect(startingLine, y, rectWidth, rectHeight);
+    ctx.fillRect(startingLine, z, rectWidth, rectHeight);
+    ctx.fillRect(finishLine, 40, 10, 1500);
