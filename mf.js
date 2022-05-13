@@ -35,12 +35,31 @@ function draw() {
     ctx.fillRect(borderBarx, 0, 60, pageHeight);
     ctx.fillRect( 0 , borderBary, pageWidth, 50 );
     ctx.fillRect(0, 300 , borderBary, 80); 
+
+ function draw() {
+  var canvas = document.getElementById('creativeCoding');
+  if (canvas.getContext) {
+   
+    fix_dpi(); 
+    var ctx = canvas.getContext('2d');     
     // Red
     ctx.fillStyle = 'rgb(255, 0, 0)'; 
     ctx.fillRect(borderBarx+60, 0, pageWidth - borderBarx, borderBary);
+ function draw() {
+  var canvas = document.getElementById('creativeCoding');
+  if (canvas.getContext) {
+   
+    fix_dpi(); 
+    var ctx = canvas.getContext('2d');     
     // Blue
     ctx.fillStyle = 'rgb(0, 0, 255)'; 
     ctx.fillRect( 0 ,  borderBary+50, borderBarx, borderBary + pageHeight );
+ function draw() {
+  var canvas = document.getElementById('creativeCoding');
+  if (canvas.getContext) {
+   
+    fix_dpi(); 
+    var ctx = canvas.getContext('2d');      
      // Black
      ctx.fillStyle = 'rgb(0, 0, 0)'; 
      ctx.fillRect(1800, borderBary, 60, borderBary + pageHeight );
