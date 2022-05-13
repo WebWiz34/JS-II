@@ -1,9 +1,19 @@
 
+var rectWidth = 350;
+var rectHeight = 300;
+var startingLine = 100;
 
-var borderBarx = 600;
-var borderBary = 800;
-var pageHeight = 1500;
-var pageWidth = 2500;
+/* playing with number is as easy as assigning a variable. */
+
+
+/* Then we will assign some math to the variables and use it in our program */
+
+var x = 50 + 50;
+var y = startingLine + 350;
+var z = 400 * 2;
+var finishLine = (rectHeight/ 2) + 1500; 
+
+
 
 var canvas = document.getElementById('creativeCoding');
 var ctx = canvas.getContext('2d');
@@ -30,50 +40,14 @@ function draw() {
    
     fix_dpi(); 
     var ctx = canvas.getContext('2d');
-    // Black
-    ctx.fillStyle = 'rgb(0, 0, 0)'; 
-    ctx.fillRect(borderBarx, 0, 60, pageHeight);
-    ctx.fillRect( 0 , borderBary, pageWidth, 50 );
-    ctx.fillRect(0, 300 , borderBary, 80); 
+    ctx.fillStyle = 'rgb(0, 255, 0)'; 
 
- function draw() {
-  var canvas = document.getElementById('creativeCoding');
-  if (canvas.getContext) {
+
+/* now we will pass the variable */
+
    
-    fix_dpi(); 
-    var ctx = canvas.getContext('2d');     
-    // Red
-    ctx.fillStyle = 'rgb(255, 0, 0)'; 
-    ctx.fillRect(borderBarx+60, 0, pageWidth - borderBarx, borderBary);
- function draw() {
-  var canvas = document.getElementById('creativeCoding');
-  if (canvas.getContext) {
-   
-    fix_dpi(); 
-    var ctx = canvas.getContext('2d');     
-    // Blue
-    ctx.fillStyle = 'rgb(0, 0, 255)'; 
-    ctx.fillRect( 0 ,  borderBary+50, borderBarx, borderBary + pageHeight );
- function draw() {
-  var canvas = document.getElementById('creativeCoding');
-  if (canvas.getContext) {
-   
-    fix_dpi(); 
-    var ctx = canvas.getContext('2d');      
-     // Black
-     ctx.fillStyle = 'rgb(0, 0, 0)'; 
-     ctx.fillRect(1800, borderBary, 60, borderBary + pageHeight );
-     // Black
-     ctx.fillStyle = 'rgb(0, 0, 0)'; 
-     ctx.fillRect(1800, borderBary + 300, pageWidth-borderBary, 60 );
-    // Yellow
-    // https://www.rapidtables.com/web/color/RGB_Color.html
-    ctx.fillStyle = 'rgb(255, 255, 0)'; 
-    ctx.fillRect( 1860 ,  borderBary + 360, borderBarx, borderBary + pageHeight );
-
-    }
-  }
-
-
-
+    ctx.fillRect(startingLine, x, rectWidth, rectHeight);
+    ctx.fillRect(startingLine, y, rectWidth, rectHeight);
+    ctx.fillRect(startingLine, z, rectWidth, rectHeight);
+    ctx.fillRect(finishLine, 0, 20, 1500);
 
